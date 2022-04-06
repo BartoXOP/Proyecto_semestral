@@ -1,0 +1,95 @@
+.header {
+    background-color: rgb(48, 243, 23);
+    display: flex;
+    justify-content: space-around;
+}
+
+.navegacion {
+    float: right;
+}
+
+#contenedorPerror {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: auto;
+    background-color: white;
+}
+
+.abajo_del_perro {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contenido {
+    display: flex;
+    background-color: rgb(48, 243, 23);
+    color: rgb(3, 3, 3);
+    width: 100%;
+    padding: 20px;
+    font-family: verdana;
+    font-weight: bold;
+}
+
+.principal {
+    background-color:white;
+}
+
+.fono {
+    width: 30%;
+}
+
+.rescate {
+    width: 40%;
+    text-align: center;
+}
+
+.redes {
+    width: 30%;
+    text-align: center;
+}
+
+.redes ul li {
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+}
+
+.redes img {
+    height: 16px;
+}
+
+.lateral_1, .lateral_2 {
+    width: 50%;
+    height: 500px;
+    padding: 30px;
+    background-color: rgba(246, 238, 238, 0.442);
+    font-family: verdana;
+}
+
+.lateral_1 {
+    text-align: right;
+}
+
+.lateral_2 img {
+    width: 50%;
+}
+
+.contenedor-inferior {
+    display: flex;
+}
+
+.footer {
+    text-align: flex;
+}
+
+@media screen and (max-width:720px) {
+    .header {
+        flex-direction: column;
+    }
+    .footer {
+        display: none;
+    }
+}

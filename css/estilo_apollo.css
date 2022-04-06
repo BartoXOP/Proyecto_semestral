@@ -1,0 +1,14 @@
+.imagen {
+    width: 50%;
+    border: 5px solid blue;
+}
+
+.contenido {
+    text-align: center;
+    font-family: "Courier New", Courier, monospace;
+    font-size: xx-large;
+}
+
+img {
+    width: 70%;
+}
