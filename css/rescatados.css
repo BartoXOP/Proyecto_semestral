@@ -1,0 +1,9 @@
+.header {
+    background-color: rgb(56, 196, 37);
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer {
+    text-align: flex;
+}

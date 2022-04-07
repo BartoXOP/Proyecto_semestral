@@ -1,5 +1,5 @@
 .header {
-    background-color: rgb(48, 243, 23);
+    background-color: rgb(56, 196, 37);
     display: flex;
     justify-content: space-around;
 }
@@ -23,7 +23,7 @@
 
 .contenido {
     display: flex;
-    background-color: rgb(48, 243, 23);
+    background-color: rgb(56, 196, 37);
     color: rgb(3, 3, 3);
     width: 100%;
     padding: 20px;
