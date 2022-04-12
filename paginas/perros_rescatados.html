@@ -12,20 +12,47 @@
 </head>
 <body>
     <div class="container">
-        <div class="header">
+        <div class="header sticky-top d-flex">
             <div class="logo">
-                <img src="../img/logo.png" alt="LOGO_PERRIS">
+                <div class="logo_pad">
+                    <img src="/img/logo_pad.png" alt="LOGO_PERRIS">
+                </div>
+                <div class="logo_misPerris">
+                    <div class="logo_mis">
+                        <img src="/img/logo_mis.png" alt="LOGO_PERRIS">
+                    </div>
+                    <div class="logo_perris">
+                        <img src="/img/logo_Perris.png" alt="LOGO_PERRIS">
+                    </div>
+                </div>
             </div>
+
+            <div class="dropmenu">
+                <div class="btn-group drop">
+                    <button type="button" class="btn  dropdown-toggle" 
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img class="dropImg" src="/img/dropMenu.png" alt="">
+                    </button>
+                    <div class="dropdown-menu" x-placement="right-start" 
+                    style="position: absolute; transform: translate3d(110px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
+                    <a class="dropdown-item" href="../index.html">Inicio</a>
+                    <a class="dropdown-item" href="#!">Perros Rescatados</a>
+                    <a class="dropdown-item" href="../paginas/carruselPerros.html">Perros</a>
+                    <a class="dropdown-item" href="#!">Contáctanos</a>
+                    </div>
+                </div>
+            </div>
+
             <div class="navegacion">
                 <ul class="nav justify-content-end">
                     <li class="nav-item">
-                        <a class="nav-link btn-outline-primary" href="../index.html">Inicio</a>
+                        <a class="nav-link btn-outline-primary " href="../index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link btn-outline-primary" href="#!">Perros Rescatados</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link btn-outline-primary" href="carruselPerros.html">Perros</a>
+                        <a class="nav-link btn-outline-primary" href="../paginas/carruselPerros.html">Perros</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link btn-outline-primary" href="#!">Contáctanos</a>
@@ -38,7 +65,7 @@
             <div class="v-container">
                 <iframe 
                 src="https://www.youtube.com/embed/eyLXhHblVzg" 
-                title="YouTube video player" frameborder="0" 
+                title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen></iframe>
             </div>

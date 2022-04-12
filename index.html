@@ -13,11 +13,38 @@
 </head>
 
 <body>
-    <div class="container ">
-        <div class="header sticky-top">
+    <div class="container">
+        <div class="header sticky-top d-flex">
             <div class="logo">
-                <img src="img/logo.png" alt="LOGO_PERRIS">
+                <div class="logo_pad">
+                    <img src="/img/logo_pad.png" alt="LOGO_PERRIS">
+                </div>
+                <div class="logo_misPerris">
+                    <div class="logo_mis">
+                        <img src="/img/logo_mis.png" alt="LOGO_PERRIS">
+                    </div>
+                    <div class="logo_perris">
+                        <img src="/img/logo_Perris.png" alt="LOGO_PERRIS">
+                    </div>
+                </div>
             </div>
+
+            <div class="dropmenu">
+                <div class="btn-group drop">
+                    <button type="button" class="btn  dropdown-toggle" 
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img class="dropImg" src="/img/dropMenu.png" alt="">
+                    </button>
+                    <div class="dropdown-menu" x-placement="right-start" 
+                    style="position: absolute; transform: translate3d(110px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
+                    <a class="dropdown-item" href="#!">Inicio</a>
+                    <a class="dropdown-item" href="./paginas/perros_rescatados.html">Perros Rescatados</a>
+                    <a class="dropdown-item" href="./paginas/carruselPerros.html">Perros</a>
+                    <a class="dropdown-item" href="#!">Contáctanos</a>
+                    </div>
+                </div>
+            </div>
+
             <div class="navegacion">
                 <ul class="nav justify-content-end">
                     <li class="nav-item">
@@ -35,6 +62,7 @@
                 </ul>
             </div>
         </div>
+
         <!--- ahora el cuerpo principal donde esta cabeza de perro-->
         <section>
             <div class="principal"> 
@@ -71,7 +99,7 @@
 
         <div class="contenedor-inferior">
             <aside class="lateral_1">
-                <h1>RESCATE</h1>
+                <h1 class="text-break">RESCATE</h1>
                 <h5>ETAPA UNO</h5>
                 <p>Rescatamos perros en situación de peligro y/o abandono. Los rehabilitamos y los preparamos para buscarles un hogar.</p>
                 <img src="img/rescate.jpg" alt="perrito rescatado" />

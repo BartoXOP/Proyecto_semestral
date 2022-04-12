@@ -1,3 +1,34 @@
+.header {
+    background-color: rgb(252, 229, 26);
+    display: flex;
+    justify-content: space-around;
+}
+.logo{
+    display: flex;
+    justify-content: space-around;
+}
+div.logo_pad img{
+    float: left;
+    padding: 5px;
+    width: 70%;
+}
+.logo_misPerris{
+    display: flex;
+}
+div.logo_misPerris img{
+    width: 70%;
+}
+
+.dropmenu{
+    display: none;
+}
+
+.navegacion {
+    float: right;
+    display: contents;
+    width: 100%;
+}
+
 .carrusel {
     display: flex;
     justify-content: center;
@@ -55,4 +86,56 @@ div.desc {
 
 #id_oso {
     padding: 15px;
+}
+
+@media screen and (max-width:1000px){
+    .header {
+        align-content: row;
+        justify-content: space-around;
+        flex: auto;
+    }
+    .logo_misPerris{
+        flex-direction: column;
+    }
+    div.logo_pad img{
+        width: 80%;
+    }
+    div.logo_mis img{
+        width: 20%;
+        padding-block: -50px;
+    }
+    div.logo_perris img{
+        width: 40%;
+    }
+
+    .dropmenu{
+        display:flex;
+        width: auto;
+    }
+    
+    .btn{
+        width: 50%;
+    }
+
+    .navegacion{
+        display: none;
+    }
+}
+
+@media screen and (max-width:400px){
+    div.logo_mis img{
+        display: none;
+    }
+    div.logo_perris img{
+        display: none;
+    }
+
+    div.logo_pad img{
+        padding: 5px;
+        width: 100%;
+    }
+        
+    .dropmenu{
+        width: 50%;
+    }
 }

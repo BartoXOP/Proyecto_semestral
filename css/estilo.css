@@ -3,12 +3,30 @@
     display: flex;
     justify-content: space-around;
 }
-div.logo img{
+.logo{
+    display: flex;
+    justify-content: space-around;
+}
+div.logo_pad img{
+    float: left;
     padding: 5px;
     width: 70%;
 }
+.logo_misPerris{
+    display: flex;
+}
+div.logo_misPerris img{
+    width: 70%;
+}
+
+.dropmenu{
+    display: none;
+}
+
 .navegacion {
     float: right;
+    display: contents;
+    width: 100%;
 }
 
 #contenedorPerror {
@@ -68,6 +86,11 @@ div.logo img{
     height: 16px;
 }
 
+.contenedor-inferior {
+    display: flex;
+    justify-content: space-around;
+}
+
 .lateral_1, .lateral_2 {
     width: 50%;
     height: 500px;
@@ -80,27 +103,50 @@ div.logo img{
     text-align: right;
 }
 
-.lateral_2 img {
+.lateral_1 img, .lateral_2 img {
     width: 100%;
-}
-
-.lateral_1 img {
-    width: 100%;
-}
-
-.contenedor-inferior {
-    display: flex;
 }
 
 .footer {
     text-align: flex;
 }
 
-@media screen and (max-width:720px) {
+@media screen and (max-width:1000px){
     .header {
+        align-content: row;
+        justify-content: space-around;
+        flex: auto;
+    }
+    .logo_misPerris{
         flex-direction: column;
     }
+    div.logo_pad img{
+        width: 80%;
+    }
+    div.logo_mis img{
+        width: 20%;
+        padding-block: -50px;
+    }
+    div.logo_perris img{
+        width: 40%;
+    }
+
+    .dropmenu{
+        display:flex;
+        width: auto;
+    }
     
+    .btn{
+        width: 50%;
+    }
+
+    .navegacion{
+        display: none;
+    }
+}
+
+@media screen and (max-width:600px) {
+
     .footer {
         display: none;
     }
@@ -114,5 +160,22 @@ div.logo img{
         padding: 30px;
         background-color: rgba(246, 238, 238, 0.442);
         font-family: verdana;
+    }
+}
+@media screen and (max-width:400px){
+    div.logo_mis img{
+        display: none;
+    }
+    div.logo_perris img{
+        display: none;
+    }
+
+    div.logo_pad img{
+        padding: 5px;
+        width: 100%;
+    }
+        
+    .dropmenu{
+        width: 50%;
     }
 }
