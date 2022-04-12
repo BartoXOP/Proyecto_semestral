@@ -3,7 +3,14 @@
     display: flex;
     justify-content: space-around;
 }
-
+div.logo img{
+    padding: 5px;
+    width: 70%;
+}
 .footer {
     text-align: flex;
+}
+.video{
+    display: flex;
+    justify-content: space-around;
 }
