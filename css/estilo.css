@@ -1,5 +1,5 @@
 .header {
-    background-color: rgb(56, 196, 37);
+    background-color: rgb(252, 229, 26);
     display: flex;
     justify-content: space-around;
 }
@@ -23,7 +23,7 @@
 
 .contenido {
     display: flex;
-    background-color: rgb(56, 196, 37);
+    background-color: rgb(252, 229, 26);
     color: rgb(3, 3, 3);
     width: 100%;
     padding: 20px;
@@ -31,8 +31,12 @@
     font-weight: bold;
 }
 
-.principal {
+.principal { 
     background-color:white;
+}
+
+.principal img {
+    width: 100%;
 }
 
 .fono {
@@ -74,7 +78,11 @@
 }
 
 .lateral_2 img {
-    width: 50%;
+    width: 80%;
+}
+
+.lateral_1 img {
+    width: 100%;
 }
 
 .contenedor-inferior {

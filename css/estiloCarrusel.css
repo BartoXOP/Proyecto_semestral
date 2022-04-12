@@ -31,9 +31,9 @@ div.desc {
     width: 24.99999%;
 }
 
-#apolo,
+#zeus,
 #duque,
-#tom {
+#pelusa {
     /* offset-x | offset-y | blur-radius | color */
     text-shadow: 3px 2px 3px black;
 }
