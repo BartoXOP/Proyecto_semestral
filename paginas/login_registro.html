@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/css/estilo_login_registro.css">
+  <link rel="icon" href="../img/icons/patita.ico">
+  <title>Login y Registro</title>
+</head> 
+<body> 
+ 
+	<div class="container ">
+
+    <!-- Registrarse --> 
+    <div class="container-form signUp">
+      <form  class="form">
+        <h2 class="title">Registrarse</h2> 
+        <input type="text" class="input" placeholder="Usuario">
+        <input type="email" class="input" placeholder="Email">
+        <input type="password" class="input" placeholder="Contraseña">
+        <button class="btn">Registrarse</button>
+      </form>
+    </div>
+
+     <div class="container-form signIn">
+      <form  class="form">
+        <h2 class="title">Ingresar</h2> 
+        <input type="text" class="input" placeholder="Usuario">
+        <input type="password" class="input" placeholder="Contraseña">
+        <a href="#" class="link">¿Olvidaste tu contraseña?</a>
+        <button class="btn">Ingresar</button>
+      </form>
+    </div>
+
+
+    <!-- Panel -->
+    <div class="container-overlay">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <button class="btn" id="signIn">Ingresar</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <button class="btn" id="signUp">Registrarse</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
+  <script src="/js/script.js"></script>
+</body>
+</html>
