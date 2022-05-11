@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--- Bootstrap & CSS --->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/rescatados.css">
-
-    <title>Rescatados</title>
+    <link rel="stylesheet" href="../css/contacto.css">
+    <!--- Jquery Validation --->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <!--- JS --->
+    <script src="../js/contacto.js"></script>
+    <title>Contacto</title>
     <link rel="icon" href="../img/icons/patita.ico">
 </head>
 <body>
@@ -36,9 +41,9 @@
                     <div class="dropdown-menu"
                     style="position: absolute; transform: translate3d(110px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
                     <a class="dropdown-item" href="../index.html">Inicio</a>
-                    <a class="dropdown-item" href="#!">Perros Rescatados</a>
+                    <a class="dropdown-item" href="../paginas/perros_rescatados.html">Perros Rescatados</a>
                     <a class="dropdown-item" href="../paginas/carruselPerros.html">Perros</a>
-                    <a class="dropdown-item" href="../paginas/contacto.html">Contáctanos</a>
+                    <a class="dropdown-item" href="#!">Contáctanos</a>
                     </div>
                 </div>
             </div>
@@ -49,30 +54,37 @@
                         <a class="nav-link btn-outline-primary " href="../index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link btn-outline-primary" href="#!">Perros Rescatados</a>
+                        <a class="nav-link btn-outline-primary" href="../paginas/perros_rescatados.html">Perros Rescatados</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link btn-outline-primary" href="../paginas/carruselPerros.html">Perros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link btn-outline-primary" href="../paginas/contacto.html">Contáctanos</a>
+                        <a class="nav-link btn-outline-primary" href="#!">Contáctanos</a>
                     </li>
                 </ul>
             </div>
         </div>
 
-        <section class="contenido">
-            <div class="v-container">
-                <iframe 
-                src="https://www.youtube.com/embed/eyLXhHblVzg" 
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen></iframe>
-            </div>
-        </section>
-        <footer class="footer">
-            Diseño web y mobile
-        </footer>
+        </div class='contenido'>
+            <form id="basic-form" action="" method="post">
+                <p>
+                    <label for="name">Nombre <span></span></label>
+                    <input id="name" name="name" minlength="3" type="text" required>
+                </p>
+                <p>
+                    <label for="age">Edad <span></span></label>
+                    <input id="age" name="age">
+                </p>
+                <p>
+                    <label for="email">E-Mail <span></span></label>
+                    <input id="email" type="email" name="email" required>
+                </p>
+                <p>
+                    <input class="submit" type="submit" value="ENVIAR">
+                </p>
+            </form>
+        <div>
+
     </div>
 </body>
-</html>
