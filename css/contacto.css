@@ -40,6 +40,15 @@ div.logo_misPerris img{
     font-weight: 300;
     font-size: 1.25rem;
     width: 300px;
+    align-items: center;
+    place-items: center;
+    justify-content: center;
+}
+
+.formulario{
+    align-items: center;
+    place-items: center;
+    justify-content: center;
 }
 
 form, p {
