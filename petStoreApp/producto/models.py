@@ -18,10 +18,10 @@ class Producto(models.Model):
     nombre              = models.CharField(max_length=50)
     marca               = models.ForeignKey(Marca, on_delete=models.PROTECT)
     tipo_producto       = models.ForeignKey(Tipo_producto, on_delete=models.PROTECT)
-    precio              = models.IntegerField
+    precio              = models.IntegerField(default=0)
     descripcion         = models.TextField()
     imagen              = models.ImageField(upload_to="prod_imgs", null=True)
-    stock               = models.IntegerField(null=True)
+    stock               = models.IntegerField(default=1)
     disponible          = models.BooleanField(default=True)
     fecha_publicacion   = models.DateTimeField(default=timezone.now)
     def __str__(self):
