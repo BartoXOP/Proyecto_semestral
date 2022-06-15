@@ -1,5 +1,7 @@
 from django.db import models
 from django.utils import timezone
+from datetime import datetime, timedelta
+from distutils.command.upload import upload
 
 class Marca(models.Model):
     nombre = models.CharField(max_length=50)
