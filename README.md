@@ -6,6 +6,12 @@ Integrantes:
 
 - José Barboza
 
+----- IMPORTANTE:
+SUPERUSUARIO: 
+NOMBRE: admin
+CLAVE: adminadmin
+
+
 ----- INTEGRACIÓN DJANGO:
 
 PRODUCTOS EN EL HOME
