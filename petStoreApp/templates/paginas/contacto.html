@@ -1,0 +1,39 @@
+<!--- Hereda la navbar y el footer de base.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+    <!--- css -->
+    <link rel="stylesheet" href="{% static 'css/contacto.css' %}">
+{% endblock %}
+{% block js %}
+    <!--- js -->
+    <!--- Jquery Validation --->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <!--- JS --->
+    <script src="../js/contacto.js"></script>
+{% endblock %}
+<!--- Desde acá comienza el contenido de la pagina -->
+{% block contenido %}
+{% load humanize %}
+
+</div class='contenido'>
+    <form id="basic-form" class="formulario" action="" method="post">
+        <p>
+            <label for="name">Nombre <span></span></label>
+            <input id="name" name="name" minlength="3" type="text" required>
+        </p>
+        <p>
+            <label for="age">Edad <span></span></label>
+            <input id="age" name="age">
+        </p>
+        <p>
+            <label for="email">E-Mail <span></span></label>
+            <input id="email" type="email" name="email" required>
+        </p>
+        <p>
+            <input class="submit" type="submit" value="ENVIAR">
+        </p>
+    </form>
+<div>
+{% endblock %}

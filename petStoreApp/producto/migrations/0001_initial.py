@@ -34,7 +34,7 @@ class Migration(migrations.Migration):
                 ('nombre', models.CharField(max_length=50)),
                 ('precio', models.IntegerField(default=0)),
                 ('descripcion', models.TextField()),
-                ('imagen', models.ImageField(null=True, upload_to='prod_imgs')),
+                ('imagen', models.ImageField(null=True, upload_to='')),
                 ('stock', models.IntegerField(default=1)),
                 ('disponible', models.BooleanField(default=True)),
                 ('fecha_publicacion', models.DateTimeField(default=django.utils.timezone.now)),

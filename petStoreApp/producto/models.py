@@ -20,7 +20,7 @@ class Producto(models.Model):
     tipo_producto       = models.ForeignKey(Tipo_producto, on_delete=models.PROTECT)
     precio              = models.IntegerField(default=0)
     descripcion         = models.TextField()
-    imagen              = models.ImageField(upload_to="prod_imgs", null=True)
+    imagen              = models.ImageField(upload_to="", null=True)
     stock               = models.IntegerField(default=1)
     disponible          = models.BooleanField(default=True)
     fecha_publicacion   = models.DateTimeField(default=timezone.now)

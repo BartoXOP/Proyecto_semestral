@@ -1,3 +1,10 @@
+body{
+    background-color:rgb(255, 250, 250);
+    min-height: 100vh;
+    margin: 0; 
+    display:flex; 
+    flex-direction:column; 
+}
 .header {
     background-color: rgb(252, 229, 26);
     display: flex;
@@ -28,6 +35,32 @@ div.logo_misPerris img{
     display: contents;
     width: 100%;
 }
+
+/*contenedor de platos*/
+.platos {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 12rem;
+    max-width: 15rem;
+}
+.plato {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    
+}
+.plato_imagen {
+    width: 100%;
+    height: 15rem;
+}
+.plato img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 5%;
+}
+.plato .detalle {
+    padding: 5px;
+}
+
 
 #contenedorPerror {
     width: 100%;
@@ -149,9 +182,9 @@ div.logo_misPerris img{
 
 @media screen and (max-width:600px) {
 
-    .footer {
+    /*.footer {
         display: none;
-    }
+    }*/
     .contenedor-inferior {
         justify-content: space-around;
         flex-direction: column;

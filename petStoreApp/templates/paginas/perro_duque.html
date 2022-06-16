@@ -1,0 +1,28 @@
+<!--- Hereda la navbar y el footer de base.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+    <!--- css -->
+    <link rel="stylesheet" href="{% static 'css/estilo_perro.css' %}">
+{% endblock %}
+{% block js %}
+    <!--- js -->
+{% endblock %}
+
+<!--- Desde acá comienza el contenido de la pagina -->
+{% block contenido %}
+{% load humanize %}
+
+<div class="container-fluid">
+  <div class="d-flex justify-content-center">
+      <img src="{% static 'images/adoptados/Duque.jpg' %}" alt="">
+  </div>
+  <div class="contenido">
+      <p>Duke es campeon para comer!!!!!!</p>
+  </div>
+</div>
+<div>
+  <a class="nav-link btn-outline-primary" href="{% url 'carrusel_perros' %}">Volver al carrusel</a>
+  <a class="nav-link btn-outline-primary" href="{% url 'home' %}">Ir a inicio</a>
+</div>
+{% endblock %}
