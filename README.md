@@ -6,7 +6,27 @@ Integrantes:
 
 - José Barboza
 
-- Pablo Rojas
+----- INTEGRACIÓN DJANGO:
+
+PRODUCTOS EN EL HOME
+
+![image](https://user-images.githubusercontent.com/101838235/173993254-17ad3174-d73e-492f-a5ef-c7349840f2e6.png)
+
+CRUD [LISTAR, AGREGAR, MODIFICAR, BORRAR]
+
+![image](https://user-images.githubusercontent.com/101838235/173993370-1ac3dcc4-a360-4be1-8651-4b6bb13ee001.png)
+
+PANEL ADMIN:
+
+![image](https://user-images.githubusercontent.com/101838235/173993456-9d93540c-d45d-4887-be6b-e0212a77cd0e.png)
+
+JERARQUIA VSCODE:
+
+![image](https://user-images.githubusercontent.com/101838235/173993674-0e177d54-03ed-4f56-a13d-c64c2816c502.png)
+
+
+
+------ CAPTURAS ANTIGUAS:
 
 web icon
 
