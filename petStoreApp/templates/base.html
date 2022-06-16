@@ -35,15 +35,14 @@
         <!-- NAVBAR -->
         {% include 'navbar.html' %}
 
-        <div class="">
-        {% block contenido %}
-        {% endblock %}
+        <div class="container-fluid">
+            {% block contenido %}
+            {% endblock %}
         </div>
-        
-        {% include 'footer.html' %}
 
         <!-- este es el div del container general-->
     </div>
+    {% include 'footer.html' %}
 
 
     <!---SCRIPTS-->

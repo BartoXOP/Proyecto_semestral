@@ -1,110 +1,65 @@
 <!--- HAY QUE ACTUALIZAR A DJANGO, PARA MÁS ADELANTE -->
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="../img/icons/patita.ico">
-    <!--- Bootstrap & CSS --->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/login_y_register.css">
+<!--- Hereda la navbar y el footer de base.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+    <!--- css -->
+    <link rel="stylesheet" href="{% static 'css/login_y_register.css' %}">
+{% endblock %}
+{% block js %}
+    <!--- js -->
     <!--- Jquery Validation --->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
     <!--- JS --->
-    <script src="../js/login_y_register.js"></script>
-    <title>Registro</title>
-    <link rel="icon" href="../img/icons/patita.ico">
-    <link rel="stylesheet" href="../css/login_y_register.css">
-</head> 
-<body> 
-<div class="container-fluid" ></div>
-    <div class="header sticky-top d-flex">
-        <div class="logo">
-                <div class="logo_pad">
-                    <img src="../img/logo_pad.png" alt="LOGO_PERRIS">
-                </div>
-                <div class="logo_misPerris">
-                    <div class="logo_mis">
-                        <img src="../img/logo_mis.png" alt="LOGO_PERRIS">
-                    </div>
-                    <div class="logo_perris">
-                        <img src="../img/logo_Perris.png" alt="LOGO_PERRIS">
-                    </div>
-                </div>
-        </div>
+    <script src="{% static 'js/login_y_register.js' %}"></script>
+{% endblock %}
 
-        <div class="dropmenu">
-            <div class="btn-group drop">
-                <button type="button" class="btn  dropdown-toggle" 
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="dropImg" src="../img/dropMenu.png" alt="">
-                </button>
-                <div class="dropdown-menu"
-                style="position: absolute; transform: translate3d(110px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
-                <a class="dropdown-item" href="../index.html">Inicio</a>
-                <a class="dropdown-item" href="../paginas/perros_rescatados.html">Perros Rescatados</a>
-                <a class="dropdown-item" href="../paginas/carruselPerros.html">Perros</a>
-                <a class="dropdown-item" href="./login.html">Iniciar Sesion</a>
+<!--- Desde acá comienza el contenido de la pagina -->
+{% block contenido %}
+{% load humanize %}
+{% load crispy_forms_tags %}
+
+<br><br>
+<div class="row ">
+    <div class="col-12 col-sm-10 col-md-8 col-lg-6 offset-sm-1 offset-md-2 offset-lg-3">
+        <div class="card">
+            <div class="card-body">
+                <div class='contenido'>
+                    <form id="basic-form" action="../index.html" method="get">
+                        <h1 style="font-family: Arial, Helvetica, sans-serif;">Registro</h1>
+                        <p>
+                            <label for="name">Nombre <span></span></label>
+                            <input id="name" name="name" minlength="3" type="text" required>
+                        </p>
+                        <p>
+                            <label for="age">Edad <span></span></label>
+                            <input id="age" name="age">
+                        </p>
+                        <p>
+                            <label for="email">E-Mail <span></span></label>
+                            <input id="email" type="email" name="email" required>
+                        </p>
+                        
+                        <p>
+                            <label for="pass">Contraseña <span></span></label>
+                            <input id="pass" name="pass">
+                        </p>
+                        <p>
+                        <label for="pass2">Confirmar Contraseña <span></span></label>
+                        <input id="pass2" name="pass2">
+                    </p>
+                    <p>
+                    <input class="submit" type="submit" value="ENVIAR">
+                    </p>
+                    </form>
+                </div>
+                <div>
+                    <a class ="nav-link btn-outline-primary btn-lg p-3" href="{% url 'home' %}">Ir a inicio</a>
                 </div>
             </div>
         </div>
-
-        <div class="navegacion">
-            <ul class="nav justify-content-end">
-                <li class="nav-item">
-                    <a class="nav-link btn-outline-primary " href="../index.html">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link btn-outline-primary" href="../paginas/perros_rescatados.html">Perros Rescatados</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link btn-outline-primary" href="../paginas/carruselPerros.html">Perros</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link btn-outline-primary" href="../paginas/web_service.html">Ubicacion</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link btn-outline-primary" href="../paginas/login.html">Inisiar Sesion</a>
-                </li>
-            </ul>
-        </div>
     </div>
-
-    <div class='contenido'>
-        <form id="basic-form" action="../index.html" method="get">
-            <h1 style="font-family: Arial, Helvetica, sans-serif;">Registro</h1>
-            <p>
-                <label for="name">Nombre <span></span></label>
-                <input id="name" name="name" minlength="3" type="text" required>
-            </p>
-            <p>
-                <label for="age">Edad <span></span></label>
-                <input id="age" name="age">
-            </p>
-            <p>
-                <label for="email">E-Mail <span></span></label>
-                <input id="email" type="email" name="email" required>
-            </p>
-            
-            <p>
-                <label for="pass">Contraseña <span></span></label>
-                <input id="pass" name="pass">
-            </p>
-            <p>
-            <label for="pass2">Confirmar Contraseña <span></span></label>
-            <input id="pass2" name="pass2">
-        </p>
-        <p>
-        <input class="submit" type="submit" value="ENVIAR">
-        </p>
-        </form>
-    </div>
-<div>
-    <footer class="footer">
-            <a class="nav-link btn-outline-primary" href="../index.html">Ir a inicio</a>
-    </footer></div>
-</body>
-</html>
+</div>
+{% endblock %}

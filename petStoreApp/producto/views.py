@@ -13,6 +13,7 @@ def home(request):
     }
     return render(request, 'home.html', data)
 
+#-----------------------------CRUD PRODUCTOS
 def listar(request):
     productos = Producto.objects.all()
     data = {
