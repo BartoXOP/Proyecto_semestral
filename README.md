@@ -9,6 +9,12 @@ Integrantes:
 - José Barboza
 -------------------------------------------------------------------- IMPORTANTE:
 
+<<<<<<< HEAD
+=======
+
+-------------------------------------------------------------------- IMPORTANTE:
+
+>>>>>>> 3dfb29c5daa23e7f3c2b54cf09fdb6ebaf4765e2
 SUPERUSUARIO: 
 
 NOMBRE: admin
