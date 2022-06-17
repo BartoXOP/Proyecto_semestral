@@ -1,0 +1,65 @@
+{% load static %}
+{% load humanize %}
+<!--- navbar -->
+<div class="header sticky-top d-flex">
+    <a href="{% url 'home' %}">
+        <div class="logo">
+            <div class="logo_pad">
+                <img src="{% static 'images/logo_pad.png' %}" alt="LOGO_PERRIS">
+            </div>
+            <div class="logo_misPerris">
+                <div class="logo_mis">
+                    <img src="{% static 'images/logo_mis.png' %}" alt="LOGO_PERRIS">
+                </div>
+                <div class="logo_perris">
+                    <img src="{% static 'images/logo_Perris.png' %}" alt="LOGO_PERRIS">
+                </div>
+            </div>
+        </div>
+    </a>
+
+    <div class="dropmenu">
+        <div class="btn-group drop">
+            <button type="button" class="btn  dropdown-toggle btn-sm" 
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img class="dropImg" src="{% static 'images/dropMenu.png' %}" alt="">
+            </button>
+            <div class="dropdown-menu" 
+            style="position: absolute; transform: translate3d(110px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
+            <a class="dropdown-item" href="{% url 'home' %}">Inicio</a>
+            <a class="dropdown-item" href="{% url 'listar' %}">Tiendita</a>
+            <a class="dropdown-item" href="{% url 'perros_rescatados' %}">Perros Rescatados</a>
+            <a class="dropdown-item" href="{% url 'carrusel_perros' %}">Perros</a>
+            <a class="dropdown-item" href="{% url 'web_service' %}">Ubicacion</a>
+            <a class="dropdown-item" href="{% url 'login' %}">Iniciar Sesion</a>
+            <a class="dropdown-item" href="{% url 'login_registro' %}">Ingresar</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="navegacion">
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link btn-outline-primary " href="{% url 'home' %}">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link btn-outline-primary " href="{% url 'listar' %}">Tiendita</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link btn-outline-primary" href="{% url 'perros_rescatados' %}">Perros Rescatados</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link btn-outline-primary" href="{% url 'carrusel_perros' %}">Perros</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link btn-outline-primary" href="{% url 'web_service' %}">Ubicacion</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link btn-outline-primary" href="{% url 'login' %}">Iniciar Sesion</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link btn-outline-primary" href="{% url 'login_registro' %}">Registrarse</a>
+            </li>
+        </ul>
+    </div>
+</div>

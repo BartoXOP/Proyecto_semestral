@@ -1,0 +1,65 @@
+<!--- HAY QUE ACTUALIZAR A DJANGO, PARA MÁS ADELANTE -->
+
+<!--- Hereda la navbar y el footer de base.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+    <!--- css -->
+    <link rel="stylesheet" href="{% static 'css/login_y_register.css' %}">
+{% endblock %}
+{% block js %}
+    <!--- js -->
+    <!--- Jquery Validation --->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <!--- JS --->
+    <script src="{% static 'js/login_y_register.js' %}"></script>
+{% endblock %}
+
+<!--- Desde acá comienza el contenido de la pagina -->
+{% block contenido %}
+{% load humanize %}
+{% load crispy_forms_tags %}
+
+<br><br>
+<div class="row ">
+    <div class="col-12 col-sm-10 col-md-8 col-lg-6 offset-sm-1 offset-md-2 offset-lg-3">
+        <div class="card">
+            <div class="card-body">
+                <div class='contenido'>
+                    <form id="basic-form" action="../index.html" method="get">
+                        <h1 style="font-family: Arial, Helvetica, sans-serif;">Registro</h1>
+                        <p>
+                            <label for="name">Nombre <span></span></label>
+                            <input id="name" name="name" minlength="3" type="text" required>
+                        </p>
+                        <p>
+                            <label for="age">Edad <span></span></label>
+                            <input id="age" name="age">
+                        </p>
+                        <p>
+                            <label for="email">E-Mail <span></span></label>
+                            <input id="email" type="email" name="email" required>
+                        </p>
+                        
+                        <p>
+                            <label for="pass">Contraseña <span></span></label>
+                            <input id="pass" name="pass">
+                        </p>
+                        <p>
+                        <label for="pass2">Confirmar Contraseña <span></span></label>
+                        <input id="pass2" name="pass2">
+                    </p>
+                    <p>
+                    <input class="submit" type="submit" value="ENVIAR">
+                    </p>
+                    </form>
+                </div>
+                <div>
+                    <a class ="nav-link btn-outline-primary btn-lg p-3" href="{% url 'home' %}">Ir a inicio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

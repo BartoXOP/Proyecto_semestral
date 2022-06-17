@@ -1,0 +1,103 @@
+<!--- Hereda la navbar y el footer de base.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+    <!--- css -->
+{% endblock %}
+{% block js %}
+    <!--- js -->
+{% endblock %}
+
+<!--- Desde acá comienza el contenido de la pagina -->
+{% block contenido %}
+{% load humanize %}
+
+<!-- CONTENIDO CENTRAL -->
+<!--- ahora el cuerpo principal donde esta cabeza de perro-->
+<div class="" id="contenido">
+    <div>
+        <div class="principal"> 
+            <div id="contenedorPerror">
+                <a href="{% url 'carrusel_perros' %}">
+                <img class="img-fluid" src="{% static 'images/perro.png' %}" alt="Cabeza de perro">
+            </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenido">
+        <div class="fono">
+            <h5><a>+56 9 98765431</a></h5>
+        </div>
+        <div class="rescate">
+            <h5><a>Rescatamos Perros</a></h5>
+        </div>
+        <div class="redes">
+            <ul>
+                <li>
+                    <img src="{% static 'images/icons/facebook-f-brands.svg' %}" alt="facebook" />
+                </li>
+                <li>
+                    <img src="{% static 'images/icons/google-plus-g-brands.svg' %}" alt="google+" />
+                </li>
+                <li>
+                    <img src="{% static 'images/icons/instagram-brands.svg' %}" alt="instagram" />
+                </li>
+                <li>
+                    <img src="{% static 'images/icons/envelope-solid.svg' %}" alt="mail" />
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- CONTENIDO PRODUCTOS -->
+    <br><br>
+    <div>
+        <h2 class="text-center animate__animated animate__lightSpeedInLeft">Tiendita</h2>
+    </div><br><br>
+    <div class="row justify-content-center row-cols-1 row-cols-sm-3 row-cols-md-3 row-cols-lg-3 row-cols-xl-4 menu text-center">
+        {% for p in producto %}
+            <!--- MÓDULO PRODUCTO -->
+            <div class="platos pb-4 animate__animated animate__zoomIn" id="plato">
+                <div class="col plato card">
+                    <!--- imagen PRODUCTO -->
+                    <div class="plato_imagen">
+                        {% if p.imagen %}
+                        <img class="card-img-top img-fluid" src="../../static/images/{{ p.imagen }}" >
+                        {% else %}
+                        <img class="card-img-top img-fluid" src="{% static 'images/placeholder.jpg' %}" alt="">
+                        {% endif %}
+                    </div>
+                    <!--- campos PRODUCTO -->
+                    <div class=" card-body detalle"> 
+                        <h6>{{ p.marca | capfirst }}</h6>
+                        <h5>{{ p.nombre | title }}</h5>
+                        <h6>${{ p.precio | intcomma }}</h6>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <br><br>
+
+
+
+    <div class="contenedor-inferior">
+        <div class="lateral_1">
+            <h1 class="text-break">RESCATE</h1>
+            <h5>ETAPA UNO</h5>
+            <p>Rescatamos perros en situación de peligro y/o abandono. Los rehabilitamos y los preparamos para buscarles un hogar.</p>
+            <img src="{% static 'images/rescate.jpg' %}" alt="perrito rescatado" />
+        </div>
+        <div class="lateral_2">
+            <img src="{% static 'images/crowfunding.jpg' %}" alt="financiamiento" />
+            <h1 class="text-break">CROWDFUNDING</h1>
+            <h5>FINANCIAMIENTO</h5>
+            <p>Sigue nuestras redes sociales para informarte acerca de las diversas campañas y actividades que realizamos para obtener financiamiento para seguir ayudando.</p>
+        </div>
+        <br>
+    </div>
+</div>
+<br><br><br><br><br><br>
+{% endblock %}

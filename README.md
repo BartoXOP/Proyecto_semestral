@@ -1,12 +1,47 @@
 # Proyecto_semestral
 
+PROGRAMACION WEB_009D
+
 Integrantes: 
 
 - Joe Muñoz
 
 - José Barboza
+-------------------------------------------------------------------- IMPORTANTE:
 
-- Pablo Rojas
+SUPERUSUARIO: 
+
+NOMBRE: admin
+
+CLAVE: adminadmin
+
+
+PIP LIST:
+
+![image](https://user-images.githubusercontent.com/101838235/174095616-70f4222e-31c4-474c-8a0f-4a822fa262aa.png)
+
+
+-------------------------------------------------------------------- INTEGRACIÓN DJANGO:
+
+PRODUCTOS EN EL HOME
+
+![image](https://user-images.githubusercontent.com/101838235/173993254-17ad3174-d73e-492f-a5ef-c7349840f2e6.png)
+
+CRUD [LISTAR, AGREGAR, MODIFICAR, BORRAR]
+
+![image](https://user-images.githubusercontent.com/101838235/173993370-1ac3dcc4-a360-4be1-8651-4b6bb13ee001.png)
+
+PANEL ADMIN:
+
+![image](https://user-images.githubusercontent.com/101838235/173993456-9d93540c-d45d-4887-be6b-e0212a77cd0e.png)
+
+JERARQUIA VSCODE:
+
+![image](https://user-images.githubusercontent.com/101838235/173993674-0e177d54-03ed-4f56-a13d-c64c2816c502.png)
+
+
+
+-------------------------------------------------------------------- CAPTURAS ANTIGUAS ENTREGA ANTERIOR:
 
 web icon
 
