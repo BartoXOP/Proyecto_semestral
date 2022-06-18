@@ -41,11 +41,8 @@ INSTALLED_APPS = [
     'colorfield',
     'django.contrib.humanize',
     'crispy_forms',
-    'producto',
-<<<<<<< HEAD
     'bootstrap_datepicker_plus',
-=======
->>>>>>> 3dfb29c5daa23e7f3c2b54cf09fdb6ebaf4765e2
+    'producto',
 ]
 
 # esto es del crispy - bootstrap
