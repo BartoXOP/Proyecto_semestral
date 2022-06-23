@@ -7,19 +7,23 @@ Integrantes:
 - Joe Muñoz
 
 - José Barboza
+
 -------------------------------------------------------------------- IMPORTANTE:
+
+#------Orden para correr este proyecto
+
+#------Ejecutar los sgtes comandos en orden:
+
+.\ambienteVirtual\Scripts\activate 
+
+python petStoreApp\manage.py runserver
+
 
 SUPERUSUARIO: 
 
 NOMBRE: admin
 
 CLAVE: adminadmin
-
-
-PIP LIST:
-
-![image](https://user-images.githubusercontent.com/101838235/174095616-70f4222e-31c4-474c-8a0f-4a822fa262aa.png)
-
 
 -------------------------------------------------------------------- INTEGRACIÓN DJANGO:
 
