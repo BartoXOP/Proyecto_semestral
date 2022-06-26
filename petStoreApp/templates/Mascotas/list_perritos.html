@@ -1,0 +1,54 @@
+<!--- Hereda la navbar y el footer de base.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+    <!--- css -->
+{% endblock %}
+{% block js %}
+    <!--- js -->
+{% endblock %}
+
+<!--- Desde acá comienza el contenido de la pagina -->
+{% block contenido %}
+{% load humanize %}
+
+    <h3>Listado de perritos</h3>
+
+    <form class="form-inline mb-5" method="GET">
+        <div class="form-group mx-3">
+            <label class="mr-2">Buscar por nombre de perrito:</label>
+            <input type="text" class="form-control mr-2" name="nombre-perrito">            
+            <button class="btn btn-secondary" type="submit" name="btn-nombre-perrito">Buscar</button>            
+        </div>
+    </form>
+
+{% if object_list %}
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>raza</th>
+            <th>edad</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for perrito in object_list %}
+        <tr>
+            <th scope="row">{{ perrito.nombre }} </th>
+            <td>{{ perrito.raza }}</td>
+            <td>{{ perrito.edad }}</td>
+
+            <td><a class="btn btn-primary" href="{% url 'edit_perrito' perrito.id %}">Editar</a></td>
+            <td><a class="btn btn-danger" href="{% url 'del_perrito' perrito.id %}">Eliminar</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% else %}
+    <h1>No hay registros de perrito</h1>
+{% endif %}
+
+{% endblock %}
