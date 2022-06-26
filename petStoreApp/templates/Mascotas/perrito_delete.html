@@ -11,12 +11,13 @@
 <!--- Desde acá comienza el contenido de la pagina -->
 {% block contenido %}
 {% load humanize %}
+{% load crispy_forms_tags %}
 
 <div class="text-center">
     <form method="post">
         {% csrf_token %}
 
-        <p class="delete-msg">Are you sure you want to delete the {{ object.nombre }}?</p>
+        <p class="delete-msg">¿Estás seguro que quieres eliminar el registro: {{ object.nombre }}?</p>
 
         <a href="{% url 'list_perritos' %}" class="btn btn-secondary">NO</a>
         <button class="btn btn-primary" type="submit">Si</button>

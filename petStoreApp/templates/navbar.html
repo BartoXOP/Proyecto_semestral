@@ -27,10 +27,11 @@
             <div class="dropdown-menu" 
             style="position: absolute; transform: translate3d(110px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
             <a class="dropdown-item" href="{% url 'home' %}">Inicio</a>tem" href="{% url 'listar' %}">Tiendita</a>
-            <a class="dropdown-item" href="{% url 'listar' %}">CRUD</a>
-            <a class="dropdown-item" href="{% url 'perros_rescatados' %}">Perros Rescatados</a>
+            <a class="dropdown-item" href="{% url 'listar' %}">CRUD Productos</a>
+            <a class="dropdown-item" href="{% url 'list_perritos' %}">CRUD Perritos</a>
             <a class="dropdown-item" href="{% url 'carrusel_perros' %}">Perros</a>
             <a class="dropdown-item" href="{% url 'web_service' %}">Ubicacion</a>
+            <a class="dropdown-item" href="{% url 'perros_rescatados' %}">Nuestra Misión</a>
             <a class="dropdown-item" href="{% url 'login' %}">Iniciar Sesion</a>
             <a class="dropdown-item" href="{% url 'login_registro' %}">Ingresar</a>
             </div>
@@ -43,16 +44,19 @@
                 <a class="nav-link btn-outline-primary " href="{% url 'home' %}">Inicio</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link btn-outline-primary " href="{% url 'listar' %}">CRUD</a>
+                <a class="nav-link btn-outline-primary " href="{% url 'listar' %}">CRUD Productos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link btn-outline-primary" href="{% url 'perros_rescatados' %}">Perros Rescatados</a>
+                <a class="nav-link btn-outline-primary " href="{% url 'list_perritos' %}">CRUD Perritos</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link btn-outline-primary" href="{% url 'carrusel_perros' %}">Perros</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link btn-outline-primary" href="{% url 'web_service' %}">Ubicacion</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link btn-outline-primary" href="{% url 'perros_rescatados' %}">Nuestra Misión</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link btn-outline-primary" href="{% url 'login' %}">Iniciar Sesion</a>

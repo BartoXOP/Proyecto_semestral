@@ -13,23 +13,23 @@ from django.views.generic import ListView, CreateView, UpdateView, DeleteView, D
 
 #------------------------------Vistas clases genéricas
 class PerritoCreate(CreateView):
-    model = Perrito
-    form_class = PerritoForm
-    template_name = 'Mascotas/perrito_form.html'
-    success_url = reverse_lazy("list_perritos")
+    model           = Perrito
+    form_class      = PerritoForm
+    template_name   = 'Mascotas/perrito_form.html'
+    success_url     = reverse_lazy("list_perritos")
 
 class PerritoList(ListView):
-    model = Perrito
-    template_name = 'Mascotas/list_perritos.html'
+    model           = Perrito
+    template_name   = 'Mascotas/list_perritos.html'
     # paginate_by = 4
 
 class PerritoUpdate(UpdateView):
-    model = Perrito
-    form_class = PerritoForm
-    template_name = 'Mascotas/perrito_form.html'
-    success_url = reverse_lazy('list_perritos')
+    model           = Perrito
+    form_class      = PerritoForm
+    template_name   = 'Mascotas/perrito_form.html'
+    success_url     = reverse_lazy('list_perritos')
 
 class PerritoDelete(DeleteView):
-    model = Perrito
-    template_name = 'Mascotas/perrito_delete.html'
-    success_url = reverse_lazy('list_perritos')
+    model           = Perrito
+    template_name   = 'Mascotas/perrito_delete.html'
+    success_url     = reverse_lazy('list_perritos')
