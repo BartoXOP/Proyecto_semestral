@@ -4,6 +4,7 @@ from .models import Producto, Tipo_producto, Marca
 from .forms import ProductoForm
 from datetime import datetime, timedelta
 from django.utils import timezone
+
 # Create your views here.
 
 def home(request):

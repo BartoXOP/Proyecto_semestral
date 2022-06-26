@@ -32,17 +32,26 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # Django Apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    # Third-Party Apps
     'colorfield',
     'django.contrib.humanize',
     'crispy_forms',
     'bootstrap_datepicker_plus',
+    'rest_framework',
+    'rest_framework.authtoken',
+    
+    # Local Apps (Your project's apps)
     'producto',
+    'Mascota',
+    'Usuario',
 ]
 
 # esto es del crispy - bootstrap
@@ -110,6 +119,16 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAdminUser',
+    ),
+}
 
 
 # Internationalization
