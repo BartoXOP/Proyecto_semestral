@@ -1,12 +1,5 @@
 
 <!--- DE MOMENTO EL VIDEO DE YOUTUBE QUEDA AL PRINCIPIO PARA QUE SE PUEDA VER, SE DEBE RESOLVER COMO INSERTAR UN VIDEO USANDO DJANGO -->
-<div class="v-container">
-    <iframe 
-    src="https://www.youtube.com/embed/eyLXhHblVzg" 
-    title="YouTube video player"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen></iframe>
-</div>
 
 <!--- Hereda la navbar y el footer de base.html -->
 {% extends 'base.html' %}
@@ -22,14 +15,16 @@
 {% block contenido %}
 {% load humanize %}
 <section class="contenido">
-    <h4>Acá debiese cargar el video youtube, se debe integrar con django</h4>
-    <h4>Queda al principio para demostración</h4>
+</section>
+    <body>
     <div class="v-container">
         <iframe 
         src="https://www.youtube.com/embed/eyLXhHblVzg" 
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
         allowfullscreen></iframe>
+
     </div>
-</section>
+    <body>
+
 {% endblock %}
