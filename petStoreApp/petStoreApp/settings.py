@@ -28,6 +28,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+#Login USER
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
 
 # Application definition
 
@@ -46,7 +49,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'bootstrap_datepicker_plus',
     'rest_framework',
-    'rest_framework.authtoken',
+    #'rest_framework.authtoken',
     
     # Local Apps (Your project's apps)
     'producto',
@@ -120,7 +123,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+'''
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.TokenAuthentication',
@@ -128,7 +131,7 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAdminUser',
     ),
-}
+}'''
 
 
 # Internationalization

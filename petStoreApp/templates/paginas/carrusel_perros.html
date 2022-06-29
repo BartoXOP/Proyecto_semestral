@@ -15,6 +15,32 @@
 {% block contenido %}
 {% load humanize %}
 
+<br><div class="row"><div class="col text-center"><h2>Nuestros perritos panzones</h2></div></div><br>
+<div class="row justify-content-center row-cols-1 row-cols-sm-3 row-cols-md-3 row-cols-lg-3 row-cols-xl-4 menu text-center">
+    {% for p in perritos %}
+        <!--- MÓDULO PRODUCTO -->
+        <div class="platos pb-4 animate__animated animate__zoomIn" id="plato">
+            <div class="col plato card">
+                <!--- imagen PRODUCTO -->
+                <div class="plato_imagen">
+                    {% if p.imagen %}
+                    <img class="card-img-top img-fluid" src="../../static/images/{{ p.imagen }}" >
+                    {% else %}
+                    <img class="card-img-top img-fluid" src="{% static 'images/placeholder.jpg' %}" alt="">
+                    {% endif %}
+                </div>
+                <!--- campos PRODUCTO -->
+                <div class=" card-body detalle"> 
+                    <h6>{{ p.raza | capfirst }}</h6>
+                    <h5>{{ p.nombre | title }}</h5>
+                    <h6>Edad: {{ p.edad | intcomma }}</h6>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+<br>
+
 <section class="carrusel">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">

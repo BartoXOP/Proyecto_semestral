@@ -6,5 +6,5 @@ urlpatterns = [
     
     # localhost:8000/usuario/registrar
     path('registrar', RegistroUsuario.as_view(), name="registrar"),
-    path('listar', UserList.as_view(), name="list_user"),
+    path('listar', UserList.as_view(), name="listar_usuarios"),
 ]
