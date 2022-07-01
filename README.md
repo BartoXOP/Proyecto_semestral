@@ -38,8 +38,6 @@ y el PUSH, para subir del pc a la nube.
 
 .\ambienteVirtual\Scripts\activate 
 
-pip install -r requirements.txt
-
 python petStoreApp\manage.py runserver
 
 --------------------------------------------------------------------

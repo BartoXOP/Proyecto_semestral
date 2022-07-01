@@ -87,8 +87,8 @@ def perrito_element(request, pk):
         return Response(status=status.HTTP_204_NO_CONTENT)
     #y si es pa meter que lo meta
     elif request.method == 'PUT': 
-        carrera_new = JSONParser().parse(request) 
-        serializer = PerritoSerializer(perrito, data=carrera_new) 
+        perrito_new = JSONParser().parse(request) 
+        serializer = PerritoSerializer(perrito, data=perrito_new) 
         if serializer.is_valid(): 
             serializer.save() 
             return Response(serializer.data, status=status.HTTP_200_OK)
