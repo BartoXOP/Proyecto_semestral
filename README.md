@@ -11,8 +11,12 @@ Integrantes:
 - José Barboza
 
 - Pablo Rojas
-#Nuevamente pablo no es de gran ayuda dentro del grupo
+#Disculpen con el atraso del video
 --------------------------------------------------------------------
+
+![video]https://youtu.be/a55naw9pb14
+
+https://youtu.be/a55naw9pb14
 
 -------------------------------------------------------------------- IMPORTANTE:
 
