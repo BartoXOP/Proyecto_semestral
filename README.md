@@ -11,7 +11,7 @@ Integrantes:
 - José Barboza
 
 - Pablo Rojas
-
+#Nuevamente pablo no es de gran ayuda dentro del grupo
 --------------------------------------------------------------------
 
 -------------------------------------------------------------------- IMPORTANTE:
