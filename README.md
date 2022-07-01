@@ -10,13 +10,10 @@ Integrantes:
 
 - José Barboza
 
-- Pablo Rojas
-#Disculpen con el atraso del video
 --------------------------------------------------------------------
 
-![video]https://youtu.be/a55naw9pb14
 
-https://youtu.be/a55naw9pb14
+
 
 -------------------------------------------------------------------- IMPORTANTE:
 
