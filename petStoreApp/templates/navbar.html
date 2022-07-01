@@ -30,7 +30,8 @@
             <a class="dropdown-item" href="{% url 'home' %}">Inicio</a>tem" href="{% url 'listar' %}">Tiendita</a>
             {% if perms.web.add_producto %}
             <a class="dropdown-item" href="{% url 'listar' %}">CRUD Productos</a>
-            <a class="dropdown-item" href="{% url 'list_perritos' %}">CRUD Perritos</a>
+            <a class="dropdown-item" href="{% url 'list_perritos' %}">Perros 
+            </a>
             <a class="dropdown-item" href="{% url 'perrito_collection' %}">API Perritos</a>
             {% endif %}
             <a class="dropdown-item" href="{% url 'carrusel_perros' %}">Perros</a>
@@ -54,10 +55,10 @@
             </li>
             {% if perms.web.add_producto %}
             <li class="nav-item">
-                <a class="nav-link btn-outline-primary " href="{% url 'listar' %}">CRUD Productos</a>
+                <a class="nav-link btn-outline-primary " href="{% url 'listar' %}">Productos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link btn-outline-primary " href="{% url 'list_perritos' %}">CRUD Perritos</a>
+                <a class="nav-link btn-outline-primary " href="{% url 'list_perritos' %}">Crud Perritos</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link btn-outline-primary " href="{% url 'perrito_collection' %}">API Perritos</a>
