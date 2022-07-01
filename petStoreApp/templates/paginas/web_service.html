@@ -4,6 +4,44 @@
 <div id ="map"> 
 </div> 
 <!--- script mapa google -->
+
+
+<!--- Hereda la navbar y el footer de base.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block css %}
+<!--- css -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/ubicacion.css' %}">
+{% endblock %}
+
+{% block js %}
+<!--- JS --->
+<script src="{% static 'js/map.js' %}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCKiIqCdZGrVxx06LSbe7uG3zXOq1Cz5k&callback=initMap" async defer></script>
+
+<!-- -- - script mapa google --> -->
+<script>
+var map;
+function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: -33.44717495587826, lng: -70.65761053098264},
+        zoom: 13,
+        });
+        var marker = new google.maps.Marker({
+                position: {lat:-33.44728866714274, lng: -70.65756009809589},
+                map: map,
+        title: 'Alonso de ovalle'
+        });
+}
+</script> 
+{% endblock %}
+
+<!--- Desde acá comienza el contenido de la pagina -->
+{% block contenido %}
+{% load humanize %}
 <script>
         var map;
         function initMap() {
@@ -19,43 +57,7 @@
         }
 </script>
 
-<!--- Hereda la navbar y el footer de base.html -->
-{% extends 'base.html' %}
-{% load static %}
-
-{% block css %}
-<!--- css -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="stylesheet" href="{% static 'css/ubicacion.css' %}">
-{% endblock %}
-
-{% block js %}
-<!--- JS --->
-<script src="{% static 'js/map.js' %}"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCKiIqCdZGrVxx06LSbe7uG3zXOq1Cz5k&callback=initMap" async defer></script>
-
-<!--- script mapa google -->
-<script>
-var map;
-function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: -33.44717495587826, lng: -70.65761053098264},
-        zoom: 13,
-        });
-        var marker = new google.maps.Marker({
-                position: {lat:-33.44728866714274, lng: -70.65756009809589},
-                map: map,
-        title: 'Alonso de ovalle'
-        });
-}
-</script>
-{% endblock %}
-
-<!--- Desde acá comienza el contenido de la pagina -->
-{% block contenido %}
-{% load humanize %}
-
-<div>
+<!-- <div>
         <div id ="map"> 
         </div> 
 
@@ -65,5 +67,5 @@ function initMap() {
         <div>
                 <a class="nav-link btn-outline-primary" href="{% url 'home' %}">Ir a inicio</a>
         </div>
-</div>
+</div> -->
 {% endblock %}
