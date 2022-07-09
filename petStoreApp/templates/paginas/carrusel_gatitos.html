@@ -1,0 +1,90 @@
+<!--- Hereda la navbar y el footer de base.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+    <!--- css -->
+    <link rel="stylesheet" href="{% static 'css/estiloCarrusel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/estilo_shizi.css' %}">
+    <link rel="stylesheet" href="{% static 'css/estilo_manchas.css' %}">
+{% endblock %}
+{% block js %}
+    <!--- js -->
+{% endblock %}
+
+<!--- Desde acá comienza el contenido de la pagina -->
+{% block contenido %}
+{% load humanize %}
+
+<br><div class="row"><div class="col text-center"><h2>Nuestros gatitos guatones</h2></div></div><br>
+<div class="row justify-content-center row-cols-1 row-cols-sm-3 row-cols-md-3 row-cols-lg-3 row-cols-xl-4 menu text-center">
+    {% for p in gatitos %}
+        <!--- MÓDULO PRODUCTO -->
+        <div class="platos pb-4 animate__animated animate__zoomIn" id="plato">
+            <div class="col plato card">
+                <!--- imagen PRODUCTO -->
+                <div class="plato_imagen">
+                    {% if p.imagen %}
+                    <img class="card-img-top img-fluid" src="../../static/images/{{ p.imagen }}" >
+                    {% else %}
+                    <img class="card-img-top img-fluid" src="{% static 'images/placeholder.jpg' %}" alt="">
+                    {% endif %}
+                </div>
+                <!--- campos PRODUCTO -->
+                <div class=" card-body detalle"> 
+                    <h6>{{ p.raza | capfirst }}</h6>
+                    <h5>{{ p.nombre | title }}</h5>
+                    <h6>Edad: {{ p.edad | intcomma }}</h6>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+<br>
+
+<section class="carrusel">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="{% url 'gato_oreo' %}">
+                    <img class="d-block" src="{% static 'images/adoptados/Oreo.jpg' %}" alt="Oreo">
+                </a>
+                <div class="carousel-caption d-none d-md-block" id="oreo">
+                    <h5>Oreo</h5>
+                    <p>Oreo tiene nombre de una galleta quien le pondria a su gato el nombre de una galleta? era maltratado por su dueño este pobre felino azul ruso lo tubimos que rescatar</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <a href="{% url 'gato_shizi' %}">
+                    <img class="d-block" src="{% static 'images/adoptados/Shizi.jpg' %}" alt="Shizi">
+                </a>
+                <div class="carousel-caption d-none d-md-block" id="shizi">
+                    <h5>Shizi</h5>
+                    <p>Shizi fue encontrada atrapada en un rincon de un edificio de la cual no podia salir la tubimos que recatar no la podiamos dejar ahi</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <a href="{% url 'gato_manchas' %}">
+                    <img class="d-block" src="{% static 'images/adoptados/Manchas.jpg' %}" alt="Manchas">
+                </a>
+                <div class="carousel-caption d-none d-md-block" id="manchas">
+                    <h5>Manchas</h5>
+                    <p>Manchas se encontro abandonado en las calles cuando era una cria fue botada de su madre tubimos que criarla desde chica no la podriamos dejarla ahi</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</section>
+{% endblock %}

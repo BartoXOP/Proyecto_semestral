@@ -1,0 +1,27 @@
+<!--- Hereda la navbar y el footer de base.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+    <!--- css -->
+{% endblock %}
+{% block js %}
+    <!--- js -->
+{% endblock %}
+
+<!--- Desde acá comienza el contenido de la pagina -->
+{% block contenido %}
+{% load humanize %}
+{% load crispy_forms_tags %}
+
+<div class="text-center">
+    <form method="post">
+        {% csrf_token %}
+
+        <p class="delete-msg">¿Estás seguro que quieres eliminar el registro: {{ object.nombre }}?</p>
+
+        <a href="{% url 'list_gatitos' %}" class="btn btn-secondary">NO</a>
+        <button class="btn btn-primary" type="submit">Si</button>
+    </form>
+</div>
+
+{% endblock %}

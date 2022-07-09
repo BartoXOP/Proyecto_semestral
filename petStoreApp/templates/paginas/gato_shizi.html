@@ -1,0 +1,28 @@
+<!--- Hereda la navbar y el footer de base.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+    <!--- css -->
+    <link rel="stylesheet" href="{% static 'css/estilo_gato.css' %}">
+{% endblock %}
+{% block js %}
+    <!--- js -->
+{% endblock %}
+
+<!--- Desde acá comienza el contenido de la pagina -->
+{% block contenido %}
+{% load humanize %}
+
+<div class="container-fluid">
+  <div class="d-flex justify-content-center">
+      <img src="{% static 'images/adoptados/Shizi.jpg' %}" alt="">
+  </div>
+  <div class="contenido">
+      <p>Shizi le encanta dormir durante largas horas!!!</p>
+  </div>
+</div>
+<div>
+  <a class="nav-link btn-outline-primary" href="{% url 'carrusel_gatos' %}">Volver al carrusel</a>
+  <a class="nav-link btn-outline-primary" href="{% url 'home_gato' %}">Ir a inicio</a>
+</div>
+{% endblock %}

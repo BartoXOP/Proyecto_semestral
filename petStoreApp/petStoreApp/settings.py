@@ -53,7 +53,9 @@ INSTALLED_APPS = [
     
     # Local Apps (Your project's apps)
     'producto',
-    'Mascota',
+    'Animales',
+    'Perritos',
+    'Gatitos',
     'Usuario',
 ]
 

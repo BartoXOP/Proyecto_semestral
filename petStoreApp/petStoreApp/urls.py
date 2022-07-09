@@ -23,7 +23,8 @@ from rest_framework.authtoken.views import obtain_auth_token
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('producto.urls')),
-    path('', include('Mascota.urls')),
+    path('', include('Perritos.urls')),
+    path('', include('Gatitos.urls')),
     path('', include('Usuario.urls')),
     
     # Login and Logout
