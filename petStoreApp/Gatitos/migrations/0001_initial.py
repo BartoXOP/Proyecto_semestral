@@ -30,7 +30,7 @@ class Migration(migrations.Migration):
                 ('imagen', models.ImageField(null=True, upload_to='')),
                 ('disponible', models.BooleanField(default=True)),
                 ('fecha_publicacion', models.DateTimeField(default=django.utils.timezone.now)),
-                ('raza', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='Animales.raza')),
+                ('raza', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, to='Gatitos.raza')),
             ],
         ),
     ]
