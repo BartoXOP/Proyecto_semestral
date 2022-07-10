@@ -1,0 +1,65 @@
+<!--- Hereda la navbar y el footer de base.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+    <!--- css -->
+    <link rel="stylesheet" href="{% static 'css/img_crud.css' %}">
+{% endblock %}
+{% block js %}
+    <!--- js -->
+{% endblock %}
+
+<!--- Desde acá comienza el contenido de la pagina -->
+{% block contenido %}
+{% load humanize %}
+<!---contenido-->
+<div class="container-lg">
+    <br><br>
+    <div class="card">
+        <div class="card-body">
+            <div class="d-flex">
+                <div class="w-100">
+                    <h3>Listado de Perritos</h3>
+                </div>
+                <div class="flex-shrink-0">
+                    <a href="{% url 'add_perrito' %}" class="btn btn-warning btn-agregar"><i class="bi bi-plus-circle"></i> Agregar nuevo</a>
+                </div>
+            </div>
+
+            {% if object_list %}
+            <hr>
+            <table class="table table-striped table-bordered table-hover table-responsive-sm align-middle">
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Raza</th>
+                    <th scope="col">Edad</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Opciones</th>
+                </tr>
+                {% for p in object_list %}
+                <tr>
+                    <th scope="row">
+                        <div class="img-rounded-container">
+                            <img class="img-fluid mini-rounded-img" src="../../static/images/{{ p.imagen }}" alt="">
+                        </div>
+                    </th>
+                    <td class="listData">{{ p.nombre | title }}</td>
+                    <td class="listData">{{ p.raza | title }}</td>
+                    <td class="listData">{{ p.edad | intcomma }}</td>
+                    <td class="listData">{{ p.descripcion | title}}</td>
+                    <td class="">
+                        <a href="{% url 'edit_perrito' p.id %}" class="btn btn-info btn-sm btn-opc">Modificar</a>
+                        <a href="{% url 'del_perrito' p.id %}" class="btn btn-danger btn-sm btn-opc">Eliminar</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+            {% else %}
+                <h1>No hay registros de perrito</h1>
+            {% endif %}
+        </div>
+    </div>
+    <hr>
+</div>
+{% endblock %}

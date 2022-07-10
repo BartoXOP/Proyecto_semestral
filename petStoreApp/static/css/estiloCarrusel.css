@@ -1,0 +1,141 @@
+.header {
+    background-color: rgb(252, 229, 26);
+    display: flex;
+    justify-content: space-around;
+}
+.logo{
+    display: flex;
+    justify-content: space-around;
+}
+div.logo_pad img{
+    float: left;
+    padding: 5px;
+    width: 70%;
+}
+.logo_misPerris{
+    display: flex;
+}
+div.logo_misPerris img{
+    width: 70%;
+}
+
+.dropmenu{
+    display: none;
+}
+
+.navegacion {
+    float: right;
+    display: contents;
+    width: 100%;
+}
+
+.carrusel {
+    display: flex;
+    justify-content: center;
+}
+
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+#zeus,
+#duque,
+#pelusa {
+    /* offset-x | offset-y | blur-radius | color */
+    text-shadow: 3px 2px 3px black;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 80%;
+}
+
+#Galeria {
+    margin: 15px;
+    float: left;
+    font-size: 14px;
+}
+
+.desc {
+    background-color: white;
+}
+
+#id_oso {
+    padding: 15px;
+}
+
+@media screen and (max-width:1000px){
+    .header {
+        align-content: row;
+        justify-content: space-around;
+        flex: auto;
+    }
+    .logo_misPerris{
+        flex-direction: column;
+    }
+    div.logo_pad img{
+        width: 80%;
+    }
+    div.logo_mis img{
+        width: 20%;
+        padding-block: -50px;
+    }
+    div.logo_perris img{
+        width: 40%;
+    }
+
+    .dropmenu{
+        display:flex;
+        width: auto;
+    }
+    
+    .btn{
+        width: 50%;
+    }
+
+    .navegacion{
+        display: none;
+    }
+}
+
+@media screen and (max-width:400px){
+    div.logo_mis img{
+        display: none;
+    }
+    div.logo_perris img{
+        display: none;
+    }
+
+    div.logo_pad img{
+        padding: 5px;
+        width: 100%;
+    }
+        
+    .dropmenu{
+        width: 50%;
+    }
+}

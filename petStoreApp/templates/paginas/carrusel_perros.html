@@ -1,0 +1,90 @@
+<!--- Hereda la navbar y el footer de base.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+    <!--- css -->
+    <link rel="stylesheet" href="{% static 'css/estiloCarrusel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/estilo_duque.css' %}">
+    <link rel="stylesheet" href="{% static 'css/estilo_pelusa.css' %}">
+{% endblock %}
+{% block js %}
+    <!--- js -->
+{% endblock %}
+
+<!--- Desde acá comienza el contenido de la pagina -->
+{% block contenido %}
+{% load humanize %}
+
+<br><div class="row"><div class="col text-center"><h2>Nuestros perritos panzones</h2></div></div><br>
+<div class="row justify-content-center row-cols-1 row-cols-sm-3 row-cols-md-3 row-cols-lg-3 row-cols-xl-4 menu text-center">
+    {% for p in perritos %}
+        <!--- MÓDULO PRODUCTO -->
+        <div class="platos pb-4 animate__animated animate__zoomIn" id="plato">
+            <div class="col plato card">
+                <!--- imagen PRODUCTO -->
+                <div class="plato_imagen">
+                    {% if p.imagen %}
+                    <img class="card-img-top img-fluid" src="../../static/images/{{ p.imagen }}" >
+                    {% else %}
+                    <img class="card-img-top img-fluid" src="{% static 'images/placeholder.jpg' %}" alt="">
+                    {% endif %}
+                </div>
+                <!--- campos PRODUCTO -->
+                <div class=" card-body detalle"> 
+                    <h6>{{ p.raza | capfirst }}</h6>
+                    <h5>{{ p.nombre | title }}</h5>
+                    <h6>Edad: {{ p.edad | intcomma }}</h6>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+<br>
+
+<section class="carrusel">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="{% url 'perro_zeus' %}">
+                    <img class="d-block" src="{% static 'images/adoptados/Zeus.jpg' %}" alt="Zeus">
+                </a>
+                <div class="carousel-caption d-none d-md-block" id="zeus">
+                    <h5>Zeus</h5>
+                    <p>Al Zeus lo encontraron mordiendo unos cables en un cohete en cabo cañaberal, por suerte los rescatamos</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <a href="{% url 'perro_duque' %}">
+                    <img class="d-block" src="{% static 'images/adoptados/Duque.jpg' %}" alt="Duque">
+                </a>
+                <div class="carousel-caption d-none d-md-block" id="duque">
+                    <h5>Duque</h5>
+                    <p>Duque fue uno de los pocos sobrevivientes de la guerra en Ucrania. ¿Quién querria hacerle daño a este regalón?</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <a href="{% url 'perro_pelusa' %}">
+                    <img class="d-block" src="{% static 'images/adoptados/Pelusa.jpg' %}" alt="Pelusa">
+                </a>
+                <div class="carousel-caption d-none d-md-block" id="pelusa">
+                    <h5>Pelusa</h5>
+                    <p>Pelusa tiene nombre de gato... Con razón tubieron que rescatarlo, ¿Que clase de psicópata le pone Pelusa a un perro?</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</section>
+{% endblock %}

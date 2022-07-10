@@ -1,0 +1,50 @@
+<!--- Hereda la navbar y el footer de base.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+    <!--- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css" integrity="sha256-DOS9W6NR+NFe1fUhEE0PGKY/fubbUCnOfTje2JMDw3Y=" crossorigin="anonymous" />
+{% endblock %}
+{% block js %}
+    <!--- js -->
+    <!-- XDSoft DateTimePicker -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js" integrity="sha256-FEqEelWI3WouFOo2VWP/uJfs1y8KJ++FLh2Lbqc8SJk=" crossorigin="anonymous"></script>
+    <script src="{% static 'js/calendario.js' %}"></script>
+{% endblock %}
+
+<!--- Desde acá comienza el contenido de la pagina -->
+{% block contenido %}
+{% load humanize %}
+{% load crispy_forms_tags %}
+<!---contenido-->
+<br><br>
+<div class="row ">
+    <div class="col-12 col-sm-10 col-md-8 col-lg-6 offset-sm-1 offset-md-2 offset-lg-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex">
+                    <div class="w-100">
+                        <h2>Agregar Gatitos</h2>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <a href="{% url 'list_gatitos' %}" class="btn btn-warning">Listado de Gatitos</a>
+                    </div>
+                </div>
+                <hr>
+                <form action="" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+
+                    <div class="d-flex justify-content-end pt-2">
+                        <input type="reset" value="Reiniciar" class="btn btn-secondary p-2">
+                        &nbsp;
+                        <input type="submit" value="Guardar" class="btn btn-primary p-2">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>
+
+{% endblock %}

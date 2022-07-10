@@ -1,0 +1,27 @@
+<!--- Hereda la navbar y el footer de base.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+    <!--- css -->
+    <link rel="stylesheet" href="{% static 'css/rescatados.css' %}">
+{% endblock %}
+{% block js %}
+    <!--- js -->
+{% endblock %}
+<!--- Desde acá comienza el contenido de la pagina -->
+{% block contenido %}
+{% load humanize %}
+<section class="contenido">
+</section>
+    <body>
+    <div class="v-container">
+        <iframe 
+        src="https://www.youtube.com/embed/eyLXhHblVzg" 
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>
+
+    </div>
+    <body>
+
+{% endblock %}
