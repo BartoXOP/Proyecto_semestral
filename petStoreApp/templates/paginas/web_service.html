@@ -1,23 +1,6 @@
 <!--- HAY QUE ACTUALIZAR A DJANGO, PARA MÁS ADELANTE -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCKiIqCdZGrVxx06LSbe7uG3zXOq1Cz5k&callback=initMap" async defer></script>
 
-<div id ="map"> 
-</div> 
-<!--- script mapa google -->
-<script>
-        var map;
-        function initMap() {
-                map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: -33.44717495587826, lng: -70.65761053098264},
-                zoom: 13,
-                });
-                var marker = new google.maps.Marker({
-                        position: {lat:-33.44728866714274, lng: -70.65756009809589},
-                        map: map,
-                title: 'Alonso de ovalle'
-                });
-        }
-</script>
 
 <!--- Hereda la navbar y el footer de base.html -->
 {% extends 'base.html' %}
@@ -48,6 +31,7 @@ function initMap() {
         title: 'Alonso de ovalle'
         });
 }
+
 </script>
 {% endblock %}
 
@@ -55,15 +39,8 @@ function initMap() {
 {% block contenido %}
 {% load humanize %}
 
-<div>
-        <div id ="map"> 
-        </div> 
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.077690870305!2d-70.65978848487063!3d-33.44728238077488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c507f91be917%3A0xcfac72a68dd4b986!2sDuoc%20UC%20-%20Sede%20Padre%20Alonso%20de%20Ovalle!5e0!3m2!1ses!2scl!4v1649350072384!5m2!1ses!2scl"
+width="1550" height="500" style="border:20;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-        <h4>Acá debiese cargar el mapa, se debe integrar con django</h4>
-        <h4>Queda al principio para demostración</h4>
-        
-        <div>
-                <a class="nav-link btn-outline-primary" href="{% url 'home' %}">Ir a inicio</a>
-        </div>
-</div>
+
 {% endblock %}
