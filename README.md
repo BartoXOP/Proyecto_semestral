@@ -36,9 +36,14 @@ y el PUSH, para subir del pc a la nube.
 
 #------Ejecutar los sgtes comandos en orden:
 
-.\ambienteVirtual\Scripts\activate 
+.\ambienteJoe\Scripts\activate 
 
 python petStoreApp\manage.py runserver
+
+
+#------O crear su propio ambiente instalando los plugins con el:
+
+pip install -r requirements.txt
 
 --------------------------------------------------------------------
 
@@ -52,21 +57,44 @@ CLAVE: adminadmin
 
 -------------------------------------------------------------------- INTEGRACIÓN DJANGO:
 
+![image](https://user-images.githubusercontent.com/101838235/178616482-3b1f0c07-fda3-4ff1-9538-60a413188671.png)
+
+
 PRODUCTOS EN EL HOME
 
 ![image](https://user-images.githubusercontent.com/101838235/175181738-4d7a25cb-5745-4742-b099-5eea67fb9451.png)
 
-CRUD [LISTAR, AGREGAR, MODIFICAR, BORRAR]
+CRUD (PRODUCTOS) [LISTAR, AGREGAR, MODIFICAR, BORRAR]
 
 ![image](https://user-images.githubusercontent.com/101838235/175181682-505e6ff6-cd98-4d44-8740-2804018c22fc.png)
 
+MÓDULO GATITOS
+
+![image](https://user-images.githubusercontent.com/101838235/178616720-d6cdbe1c-988a-40b4-b128-349cc5dc0603.png)
+
+CRUD (GATITOS)
+
+![image](https://user-images.githubusercontent.com/101838235/178616627-85c28bb2-864c-46cc-87c9-73332bc923e8.png)
+
+API (GATITOS)
+
+![image](https://user-images.githubusercontent.com/101838235/178616579-d1ae8035-7d71-4e96-b51e-c0359039d94a.png)
+
+API EXTERNA (GOOGLE MAPS integrado en django)
+
+![image](https://user-images.githubusercontent.com/101838235/178616766-a8f1ec46-d99c-49c3-aa0e-ffe607818099.png)
+
+VIDEO YOUTUBE integrado en django
+
+![image](https://user-images.githubusercontent.com/101838235/178616860-7208f3a1-3a3a-4945-a5ba-91df0e308c23.png)
+
 PANEL ADMIN:
 
-![image](https://user-images.githubusercontent.com/101838235/173993456-9d93540c-d45d-4887-be6b-e0212a77cd0e.png)
+![image](https://user-images.githubusercontent.com/101838235/178616939-05e78574-ccf7-4393-aaec-17afcd2915ba.png)
 
 JERARQUIA VSCODE:
 
-![image](https://user-images.githubusercontent.com/101838235/175181926-54e8ecd3-8da5-478e-b22c-50976c47e093.png)
+![image](https://user-images.githubusercontent.com/101838235/178616423-de914b82-b067-4efd-908f-2a4da44b9a8a.png)
 
 
 --------------------------------------------------------------------
