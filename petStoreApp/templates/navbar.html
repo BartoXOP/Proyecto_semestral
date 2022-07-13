@@ -2,6 +2,7 @@
 {% load humanize %}
 <!--- navbar -->
 <div class="header sticky-top d-flex">
+    <!--- logo -->
     <a href="{% url 'home' %}">
         <div class="logo">
             <div class="logo_pad">
@@ -17,85 +18,64 @@
             </div>
         </div>
     </a>
+    <!--- botón menú-->
+    <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+        <i class="bi bi-list"></i> Menú</button>
 
-    <!---Navbar de celular --->
-    <div class="dropmenu">
-        <div class="btn-group drop">
-            <button type="button" class="btn  dropdown-toggle btn-sm" 
-            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img class="dropImg" src="{% static 'images/dropMenu.png' %}" alt="">
-            </button>
-            <div class="dropdown-menu" 
-            style="position: absolute; transform: translate3d(110px, 0px, 0px); top: 0px; left: 0px; will-change: transform;">
-            <a class="dropdown-item" href="{% url 'home' %}">Inicio</a>
-            {% if perms.web.add_producto %}
-            <a class="dropdown-item" href="{% url 'listar' %}">Productos</a>
-            <a class="dropdown-item" href="{% url 'list_perritos' %}">CRUD Perros</a>
-            <a class="dropdown-item" href="{% url 'list_gatitos' %}">CRUD Gatos</a>
-            <a class="dropdown-item" href="{% url 'perrito_collection' %}">API Perritos</a>
-            <a class="dropdown-item" href="{% url 'gatito_collection' %}">API Gatitos</a>
-            {% endif %}
-            <a class="dropdown-item" href="{% url 'carrusel_perros' %}">Perros</a>
-            <a class="dropdown-item" href="{% url 'carrusel_gatos' %}">Gatos</a>
-            <a class="dropdown-item" href="{% url 'web_service' %}">Ubicacion</a>
-            <a class="dropdown-item" href="{% url 'perros_rescatados' %}">Nuestra Misión</a>
-            {% if user.is_authenticated %}
-            <a class="dropdown-item" href="{% url 'logout' %}">Cerrar Sesión</a>
-            {% else %}
-            <a class="dropdown-item" href="{% url 'login' %}">Iniciar Sesion</a>
-            <a class="dropdown-item" href="{% url 'registrar' %}">Ingresar</a>
-            {% endif %}
-            </div>
+    <!--- menú -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">
+                <h5 class="profile-name d-inline "><i class="bi bi-at"></i>{{ user.username | capfirst }}</h5>
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-    </div>
-
-    <!---Navbar de compu --->
-    <div class="navegacion">
-        <ul class="nav justify-content-end">
-            <li class="nav-item">
-                <a class="nav-link btn-outline-primary " href="{% url 'home' %}">Inicio</a>
-            </li>
+        <div class="offcanvas-body row">
+            <button class="btn btn-primary btn-lg" type="button">
+                <a class="dropdown-item" href="{% url 'home' %}">
+                    <i class="bi bi-house"></i> Inicio</a>
+            </button>
             {% if perms.web.add_producto %}
-            <li class="nav-item">
-                <a class="nav-link btn-outline-primary " href="{% url 'listar' %}">Productos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link btn-outline-primary " href="{% url 'list_perritos' %}">Perros CRUD</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link btn-outline-primary " href="{% url 'list_gatitos' %}">Gatos CRUD</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link btn-outline-primary " href="{% url 'perrito_collection' %}">API Perritos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link btn-outline-primary " href="{% url 'gatito_collection' %}">API Gatitos</a>
-            </li>
+            <button class="btn btn-success" type="button">
+                <a class="dropdown-item" href="{% url 'listar' %}">Productos</a>
+            </button>
+            <button class="btn btn-success" type="button">
+                <a class="dropdown-item" href="{% url 'list_perritos' %}">CRUD Perros</a>                
+            </button>
+            <button class="btn btn-success" type="button">
+                <a class="dropdown-item" href="{% url 'list_gatitos' %}">CRUD Gatos</a>                
+            </button>
+            <button class="btn btn-warning" type="button">
+                <a class="dropdown-item" href="{% url 'perrito_collection' %}">API Perritos</a>                
+            </button>
+            <button class="btn btn-warning" type="button">
+                <a class="dropdown-item" href="{% url 'gatito_collection' %}">API Gatitos</a>                
+            </button>
             {% endif %}
-            <li class="nav-item">
-                <a class="nav-link btn-outline-primary" href="{% url 'carrusel_perros' %}">Perros</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link btn-outline-primary" href="{% url 'carrusel_gatos' %}">Gatos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link btn-outline-primary" href="{% url 'web_service' %}">Ubicacion</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link btn-outline-primary" href="{% url 'perros_rescatados' %}">Nuestra Misión</a>
-            </li>
+            <button class="btn btn-danger" type="button">                
+                <a class="dropdown-item" href="{% url 'carrusel_perros' %}">Perros</a>
+            </button>
+            <button class="btn btn-danger" type="button">                
+                <a class="dropdown-item" href="{% url 'carrusel_gatos' %}">Gatos</a>
+            </button>
+            <button class="btn btn-info" type="button">                
+                <a class="dropdown-item" href="{% url 'web_service' %}">Ubicacion</a>
+            </button>
+            <button class="btn btn-info" type="button">                
+                <a class="dropdown-item" href="{% url 'perros_rescatados' %}">Nuestra Misión</a>
+            </button>
             {% if user.is_authenticated %}
-            <li class="nav-item">
-                <a class="nav-link btn-outline-primary" href="{% url 'logout' %}">Cerrar Sesión</a>
-            </li>
+            <button class="btn btn-secondary" type="button">                
+                <a class="dropdown-item" href="{% url 'logout' %}">Cerrar Sesión</a>
+            </button>
             {% else %}
-            <li class="nav-item">
-                <a class="nav-link btn-outline-primary" href="{% url 'login' %}">Iniciar Sesion</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link btn-outline-primary" href="{% url 'registrar' %}">Registrarse</a>
-            </li>
+            <button class="btn btn-success" type="button">                
+                <a class="dropdown-item" href="{% url 'login' %}">Iniciar Sesion</a>
+            </button>
+            <button class="btn btn-warning" type="button">                
+                <a class="dropdown-item" href="{% url 'registrar' %}">Registrarse</a>
+            </button>
             {% endif %}
-        </ul>
+        </div>
     </div>
 </div>
